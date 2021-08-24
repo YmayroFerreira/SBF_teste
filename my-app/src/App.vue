@@ -19,42 +19,53 @@
     </div>
     </v-app-bar>
     <v-main>
-        <v-row no-gutters>
-          <v-col
-            cols="2"
+      <v-row no-gutters align="center" justify="end">
+        <v-col
+          cols="2"
+          class="d-flex justify-center"
+        >
+          <img
+            class="LogoAnimation"
+            src="@/assets/logo_nike.svg"
           >
-            <img
-              class="LogoAnimation"
-              src="@/assets/logo_nike.svg"
-            >
-          </v-col>
-          <v-col
-            cols="7"
+        </v-col>
+        <v-col
+          cols="7"
+          class="d-flex justify-center"
+        >
+          Lançamento
+          Masculino
+          Feminino
+          Infantil
+          Ofertas
+          SNKRS
+        </v-col>
+        <v-col
+          cols="3"
+          class="d-flex justify-center"
+        >
+          <v-text-field 
+          label='busca'
+          rounded
+          outlined
           >
-            Lançamento
-            Masculino
-            Feminino
-            Infantil
-            Ofertas
-            SNKRS
-          </v-col>
-          <v-col
-            cols="3"
-          >
-            <v-text-field 
-            label='busca'
-            rounded
-            outlined
-            >
             <template v-slot:append-outer>
               <img
               class="LogoAnimation"
               src="@/assets/icon_sacola.svg"
-            >
+              >
             </template>
           </v-text-field >
-          </v-col>
-        </v-row>
+        </v-col>
+        <v-col
+          cols="12"
+        >
+          <div
+          >
+          segudna barra
+          </div>
+        </v-col>
+      </v-row>
       <router-view></router-view>
     </v-main>
   </v-app>
