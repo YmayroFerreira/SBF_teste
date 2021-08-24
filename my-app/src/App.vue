@@ -1,56 +1,73 @@
 <template>
   <v-app>
     <v-app-bar
-      app
-      color="primary"
-      dark
+    color="#F7F7F7"
+    elevation='0'
+    max-height="56px"
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+    <img
+      class="LogoAnimation"
+      src="@/assets/logo_Jordan.svg"
+    >
+    <img
+      class="LogoAnimation"
+      src="@/assets/logo_snkrs.svg"
+    >
+    <v-spacer></v-spacer>
+    <div class="headerText">
+    Ajuda | Acompanhe seu pedido | Junte-se a nós | Entrar
+    </div>
     </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+        <v-row no-gutters>
+          <v-col
+            cols="2"
+          >
+            <img
+              class="LogoAnimation"
+              src="@/assets/logo_nike.svg"
+            >
+          </v-col>
+          <v-col
+            cols="7"
+          >
+            Lançamento
+            Masculino
+            Feminino
+            Infantil
+            Ofertas
+            SNKRS
+          </v-col>
+          <v-col
+            cols="3"
+          >
+            <v-text-field 
+            label='busca'
+            rounded
+            outlined
+            >
+            <template v-slot:append-outer>
+              <img
+              class="LogoAnimation"
+              src="@/assets/icon_sacola.svg"
+            >
+            </template>
+          </v-text-field >
+          </v-col>
+        </v-row>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+//import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    //HelloWorld,
   },
 
   data: () => ({
@@ -58,3 +75,26 @@ export default {
   }),
 };
 </script>
+<style scoped>
+.headerText{
+  font-family: 'Helvetica Neue', Helvetica-Neue, HelveticaNeue, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+}
+.toolbar{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px 40px;
+
+position: static;
+width: 1024px;
+height: 72px;
+left: 0px;
+top: 56px;
+
+}
+</style>
