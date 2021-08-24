@@ -5,7 +5,7 @@
       max-width="500"
       color="#F7F7F7"
     >
-      <v-list max-width="495" max-height="500" class='overflow-y-auto' color="#F7F7F7">
+      <v-list max-width="495" max-height="538px" class='overflow-y-auto' color="#F7F7F7">
         <v-list-item-group v-model="model">
           <v-list-item
             v-for="(item, i) in list"

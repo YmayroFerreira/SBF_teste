@@ -5,109 +5,32 @@
       max-width="500"
       color="#F7F7F7"
     >
-      <v-list max-width="495" max-height="500" class='overflow-y-auto' color="#F7F7F7">
-        <v-list-item-group v-model="model">
-          <v-list-item
-            v-for="(item, i) in list"
-            :key="i"
-          >
-            <v-list-item-content>
-              <v-list-item-title v-text="item.local" class='cardTitle'></v-list-item-title>
-              <v-card rounded width='375px' height='160px'>{{item}}</v-card>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
+      <GmapMap
+        :center="{lat:-23.56692580442285, lng:-46.512397525274174}" 
+        :zoom="15"
+        map-type-id="terrain"
+        style="width: 490px; height: 538px;"
+        >
+        <GmapMarker
+            :clickable="true"
+            :draggable="true"
+        />
+        </GmapMap>
     </v-card>
   </v-main>
 </template>
 
 <script>
-  export default {
+import {gmapApi} from 'vue2-google-maps'
 
+  export default {
+    computed: {
+        google: gmapApi
+    },
     data: () => ({
       model: null,
-      list: [
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        {
-          local: 'Avenida Paulista, 1227 - Bela Vista São Paulo - SP, 01311-200',
-          details: 'Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h',
-          available: 'Disponível em 4 dias úteis',
-          cordinates: [1,2]
-        },
-        
-      ]
+       // Latitude: -85 to +85 (actually -85.05115 for some reason)
+        // Longitude: -180 to +180
     }),
   }
 </script>
@@ -141,4 +64,5 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #D6D6D6; 
 }
+
 </style>
