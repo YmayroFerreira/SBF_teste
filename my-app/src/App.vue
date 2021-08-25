@@ -48,6 +48,8 @@
           label='busca'
           rounded
           outlined
+          dense
+          height='5'
           >
             <template v-slot:append-outer>
               <img
@@ -67,18 +69,22 @@
         </v-col>
       </v-row>
       <router-view></router-view>
+      <News />
+      <AppFooter />
     </v-main>
   </v-app>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld';
+import AppFooter from './components/AppFooter';
+import News from './components/News';
 
 export default {
   name: 'App',
 
   components: {
-    //HelloWorld,
+    AppFooter,
+    News
   },
 
   data: () => ({

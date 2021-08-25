@@ -9,11 +9,13 @@
         :center="{lat:-23.56692580442285, lng:-46.512397525274174}" 
         :zoom="15"
         map-type-id="terrain"
-        style="width: 490px; height: 538px;"
+        style="width: 500px; height: 538px;"
         >
         <GmapMarker
             :clickable="true"
             :draggable="true"
+            :position="{lat:-23.56692580442285, lng:-46.512397525274174}"
+            @click="center={lat:-23.56692580442285, lng:-46.512397525274174}"
         />
         </GmapMap>
     </v-card>
