@@ -49,7 +49,7 @@
           rounded
           outlined
           dense
-          height='5'
+          color="black"
           >
             <template v-slot:append-outer>
               <img

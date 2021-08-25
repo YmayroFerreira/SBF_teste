@@ -16,6 +16,7 @@
             :draggable="true"
             :position="{lat:-23.56692580442285, lng:-46.512397525274174}"
             @click="center={lat:-23.56692580442285, lng:-46.512397525274174}"
+            :icon="{ url: require('@/assets/icon_pin_mapa.svg')}"
         />
         </GmapMap>
     </v-card>
