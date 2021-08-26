@@ -2,14 +2,13 @@
   <v-main>
     <v-card
       class="mx-auto"
-      max-width="500"
       color="#F7F7F7"
     >
       <GmapMap
         :center="{lat:-23.546344371769024, lng:-46.63900070077106}" 
         :zoom="12"
         map-type-id="terrain"
-        style="width: 500px; height: 538px;"
+        style="height: 538px;"
         >
         <GmapMarker
             v-for="(cord, index) in places"

@@ -2,13 +2,13 @@
   <v-app>
     <v-main>
       <v-container>
-        <v-row align="start" justify="end">
+        <v-row align="start" justify="center" wrap>
           <v-col
-          cols='3'>
+          md='3' sm='1'>
             
           </v-col>
           <v-col
-          cols='6'>
+          md='6' sm='10'>
             <v-text-field 
             dense
             label='Buscar por coordenadas'
@@ -20,8 +20,7 @@
             v-model='coordinates'
             >
             <template v-slot:append-outer>
-              
-              <v-btn rounded dark medium class='btn-text-transform' width="102" @click="search">
+              <v-btn rounded dark medium class='btn_align' width="102" @click="search">
                 <span >Buscar</span>
               </v-btn>
             </template>
@@ -34,15 +33,15 @@
             </v-text-field>
           </v-col>
           <v-col
-          cols='3'>
+          md='3' sm='1'>
             
           </v-col>
           <v-col
-          cols='6'>
+          md='6' sm='10' v-if='places.length > 0'>
             <LocationList />
           </v-col>
           <v-col
-          cols='6'>
+          md='6' sm='10'  v-if='places.length > 0'>
             <Map />
           </v-col>
         </v-row>
@@ -57,8 +56,11 @@ import LocationList from '@/components/LocationList';
 import Map from '@/components/Map';
 
 export default {
-  name: 'App',
-
+  computed: {
+      places(){
+        return this.$store.getters.places.slice(0, 3);
+      }
+    },
   components: {
     LocationList,
     Map
@@ -78,7 +80,8 @@ export default {
 };
 </script>
 <style scoped>
-.v-btn {
+.btn_align {
   text-transform: none;
+  margin-top: -7%;
 }
 </style>

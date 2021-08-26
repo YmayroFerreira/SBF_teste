@@ -50,7 +50,7 @@
         </v-col>
         <v-col
           cols="3"
-          class="d-flex justify-center"
+          class="d-flex justify-center align-center"
         >
           <v-text-field 
           label='busca'
@@ -58,6 +58,7 @@
           outlined
           dense
           color="black"
+          style='margin-top: 5%'
           >
             <template v-slot:append-outer>
               <img

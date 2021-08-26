@@ -14,7 +14,7 @@
               <v-list-item-title v-text="item.short" class='cardTitle'>
                 
               </v-list-item-title>
-              <v-card rounded max-width='375px' height='160px'>
+              <v-card rounded min-width='375px' height='160px'>
                 <div class='cardContent'>{{item.local}}</div>
                 <div class='cardContent'>Atendimento:<br/>{{item.details}}</div>
                 <div class='cardContent'>{{item.available}}</div>

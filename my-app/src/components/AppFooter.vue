@@ -2,7 +2,7 @@
   <v-main>
     <div class="footer">
         <v-row no-gutters align="start" justify="start" class='spacer'>
-            <v-col cols='3'>
+            <v-col md='3' sm='12'>
                 <v-row no-gutters align="center" justify="end">
                     <v-col cols='12' class='spacer'>
                         Encontre Uma Loja Nike
@@ -15,7 +15,7 @@
                     </v-col>
                 </v-row>
             </v-col>
-            <v-col cols='3'>
+            <v-col md='3' sm='12'>
                 <v-row no-gutters align="center" justify="end">
                     <v-col cols='12'>
                         AJUDA
@@ -35,7 +35,7 @@
                     </v-col>
                 </v-row>
             </v-col>
-            <v-col cols='3'>
+            <v-col md='3' sm='12'>
                 <v-row no-gutters align="center" justify="end">
                     <v-col cols='12'>
                         Sobre a nike
@@ -46,7 +46,7 @@
                     </v-col>
                 </v-row>
             </v-col>
-            <v-col cols='3'>
+            <v-col md='3' sm='12'>
                 <v-row no-gutters align="center" justify="end">
                     <v-col cols='12'>
                         Redes sociais
@@ -93,22 +93,22 @@
             <v-col cols='12'>
                 <v-divider dark></v-divider>
             </v-col>
-            <v-col cols='2' >
+            <v-col md='2' sm='4' >
                 <div class='detail'>
                     Brasil
                 </div>
             </v-col>
-            <v-col cols='2' >
+            <v-col  md='2' sm='4' >
                 <div class='detail'>
                     Política de Privacidade
                 </div>
             </v-col>
-            <v-col cols='2'>
+            <v-col  md='2' sm='4' >
                 <div class='detail'>
                     Termos de Uso
                 </div>
             </v-col>
-            <v-col cols='6' >
+            <v-col  md='6' sm='12' >
                 <div class='detail'>
                 © 2021 Nike. Todos os direitos reservados. Fisia Comércio de Produtos Esportivos Ltda - CNPJ: 59.546.515/0016-10 Rua José Semião Rodrigues Agostinho, 1370 - Galpão Unidade 17 - Nível 0, 1 e 2 - CEP 06833-300 - Embu das Artes/SP.
                 </div>
