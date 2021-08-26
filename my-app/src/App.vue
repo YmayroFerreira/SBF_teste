@@ -4,18 +4,27 @@
     color="#F7F7F7"
     elevation='0'
     max-height="56px"
+    width="100%"
     >
+    <div class='logos'>
     <img
-      class="LogoAnimation"
       src="@/assets/logo_Jordan.svg"
     >
+    </div>
+    <div class='logos'>
     <img
-      class="LogoAnimation"
       src="@/assets/logo_snkrs.svg"
     >
+    </div>
     <v-spacer></v-spacer>
     <div class="headerText">
-    Ajuda | Acompanhe seu pedido | Junte-se a nós | Entrar
+    <span >Ajuda</span >
+    <span > | </span >
+    <span >Acompanhe seu pedido </span >
+    <span >| </span >
+    <span >Junte-se a nós </span >
+    <span >| </span >
+    <span >Entrar</span >
     </div>
     </v-app-bar>
     <v-main>
@@ -25,7 +34,6 @@
           class="d-flex justify-center"
         >
           <img
-            class="LogoAnimation"
             src="@/assets/logo_nike.svg"
           >
         </v-col>
@@ -53,7 +61,6 @@
           >
             <template v-slot:append-outer>
               <img
-              class="LogoAnimation"
               src="@/assets/icon_sacola.svg"
               >
             </template>
@@ -62,10 +69,28 @@
         <v-col
           cols="12"
         >
-          <div
-          >
-          segudna barra
-          </div>
+        <div style='text-align: center;'>
+               <img
+                src="@/assets/icon_seta_esquerda.svg"
+                height="32px"
+                alt="Avatar"
+                class='imgAlign'
+              >
+              <img
+                src="@/assets/logo_nike_snkrs.svg"
+                height="32px"
+                class='alignment'
+                
+              >
+              <span >Fique por dentro dos lançamentos</span>
+              <span  >SNKRS</span>
+              <img
+                 class='imgAlign'
+                src="@/assets/icon_seta_direita.svg"
+                height="32px"
+                
+              >
+        </div>
         </v-col>
       </v-row>
       <router-view></router-view>
@@ -99,6 +124,7 @@ export default {
   font-weight: normal;
   font-size: 12px;
   line-height: 150%;
+  min-width: 35%;
 }
 .toolbar{
 display: flex;
@@ -113,5 +139,29 @@ height: 72px;
 left: 0px;
 top: 56px;
 
+}
+.logos{
+  margin-left: 3%;
+}
+#faixa{
+    height: 40px;
+    background: #F7F7F7;
+    
+}
+.test{
+   margin-left: auto;
+  margin-right: auto;
+}
+span + span {
+    margin-left: 2%;
+}
+img + span {
+    margin-left: 5%;
+}
+img + img {
+    margin-left: 10%;
+}
+span + img {
+    margin-left: 10%;
 }
 </style>

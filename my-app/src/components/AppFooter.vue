@@ -53,15 +53,12 @@
                     </v-col>
                     <v-col cols='12'>
                         <img
-                        class="LogoAnimation"
                         src="@/assets/logo_redes_sociais_facebook.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/logo_redes_sociais_instagram.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/logo_redes_sociais_youtube.svg"
                         >
                     </v-col>
@@ -70,31 +67,24 @@
                     </v-col>
                     <v-col cols='12'>
                         <img
-                        class="LogoAnimation"
                         src="@/assets/pgto_Amex.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/pgto_Boleto.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/pgto_Discover.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/pgto_Elo.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/pgto_Hipercard.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/pgto_Mastercard.svg"
                         >
                         <img
-                        class="LogoAnimation"
                         src="@/assets/pgto_Visa.svg"
                         >
                     </v-col>

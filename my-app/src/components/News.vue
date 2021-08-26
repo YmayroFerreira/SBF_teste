@@ -3,7 +3,6 @@
     <div class='container'>
         <div >
             <img
-                class="LogoAnimation"
                 src="@/assets/logo_nike.svg"
                 height="32px"
             >

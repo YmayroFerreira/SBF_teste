@@ -15,9 +15,9 @@
                 
               </v-list-item-title>
               <v-card rounded max-width='375px' height='160px'>
-                <p class='cardContent'>{{item.local}}</p>
-                <p class='cardContent'>Atendimento<br/>{{item.details}}</p>
-                <p class='cardContent'>{{item.available}}</p>
+                <div class='cardContent'>{{item.local}}</div>
+                <div class='cardContent'>Atendimento:<br/>{{item.details}}</div>
+                <div class='cardContent'>{{item.available}}</div>
                 </v-card>
             </v-list-item-content>
           </v-list-item>
@@ -69,7 +69,7 @@
   font-family: 'Helvetica Neue', Helvetica-Neue, HelveticaNeue, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 150%;
   display: flex;
   align-items: center;
