@@ -2,18 +2,23 @@
   <v-main>
     <v-card
       class="mx-auto"
-      max-width="500"
       color="#F7F7F7"
     >
-      <v-list max-width="495" max-height="538px" class='overflow-y-auto' color="#F7F7F7">
+      <v-list max-height="538px" class='overflow-y-auto' color="#F7F7F7">
         <v-list-item-group v-model="model">
           <v-list-item
-            v-for="(item, i) in list"
+            v-for="(item, i) in places"
             :key="i"
           >
             <v-list-item-content>
-              <v-list-item-title v-text="item.local" class='cardTitle'></v-list-item-title>
-              <v-card rounded width='375px' height='160px'>{{item}}</v-card>
+              <v-list-item-title v-text="item.short" class='cardTitle'>
+                
+              </v-list-item-title>
+              <v-card rounded max-width='375px' height='160px'>
+                <p class='cardContent'>{{item.local}}</p>
+                <p class='cardContent'>Atendimento<br/>{{item.details}}</p>
+                <p class='cardContent'>{{item.available}}</p>
+                </v-card>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -24,7 +29,11 @@
 
 <script>
   export default {
-
+    computed:{
+      places(){
+        return this.$store.getters.places.slice(0, 3);
+      }
+    },
     data: () => ({
       model: null,
       list: [
@@ -52,6 +61,23 @@
   font-size: 24px;
   line-height: 120%;
   color: #1A1A1A;
+}
+.cardContent{
+  position: static;
+  width: 327px;
+  height: 42px;
+  font-family: 'Helvetica Neue', Helvetica-Neue, HelveticaNeue, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #737373;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 10px 8px;
 }
 /* width */
 ::-webkit-scrollbar {
